@@ -23,7 +23,7 @@ submitReview.addEventListener('click', (event) => {
         },
     }
 
-    fetch('https://tagebuch-api-production.onrender.com/reviews', options)
+    fetch('https://tagebuch-test-api.onrender.com/reviews', options)
     .then(response => {
         console.log(response.status)
         if(response.status == 409){

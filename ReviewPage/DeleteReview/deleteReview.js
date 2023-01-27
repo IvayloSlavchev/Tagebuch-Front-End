@@ -28,7 +28,7 @@ deleteButton.addEventListener('click', (event) => {
         return;
     }
 
-    fetch(`https://tagebuch-api-production.onrender.com/reviews`, options)
+    fetch(`https://tagebuch-test-api.onrender.com/reviews`, options)
         .then((response) => {
             if (response.status === 404) {
                 errorMessage.innerText = 'Username not found';
