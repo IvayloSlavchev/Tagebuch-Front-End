@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="review.css">
+    <title>Review</title>
+</head>
+    <body>
+        <header>
+            <h3><a href="/FrontEnd/ReviewPage/UpdateReview/updateReview.html">Edit review</a></h3>
+            <h3><a href="/FrontEnd/ReviewPage/DeleteReview/deleteReview.html">Delete review</a></h3>
+        </header>
+
+        <div class="review-page">
+            <h2>Review section</h2>
+            <p id="error-message"></p>
+            <div class="input-fields">
+                <label for="">Give a title to your review</label>
+                <br>
+                <input type="text" id="reviewTitle" placeholder="Give a legendary title">
+                <br><br>
+                <label for="">Body of the review</label>
+                <ul>
+                    <li>Give an overview about the design of the website</li>
+                    <li>Is it was easy for you to read/write to notebooks?</li>
+                    <li>Are you going to recomend us to your friends?</li>
+                </ul>
+                <br>
+                <textarea name="reviewBody" id="reviewBody" cols="30" rows="10" placeholder="Give an overview about your experience in our app"></textarea>
+
+                <button id="submitReview">Submit review</button>
+            </div>
+        </div>
+
+        <script src="review.js"></script>
+    </body>
+</html>

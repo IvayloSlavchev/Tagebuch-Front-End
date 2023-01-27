@@ -1,0 +1,356 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(152, 200, 231);
+    background: linear-gradient(90deg, rgba(152, 200, 231, 1) 34%, rgba(152, 200, 231, 1) 100%);
+    font-family: sans-serif;
+    width: 100%;
+    height: 100%;
+    letter-spacing: 1px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50%;
+}
+
+.pageTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    position: relative;
+    top: .5rem;
+
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav .mainMenu {
+    display: flex;
+    list-style: none;
+}
+
+nav .mainMenu li a {
+    display: inline-block;
+    padding: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    margin-top: 1rem;
+}
+
+nav .closeMenu {
+    display: none;
+}
+
+nav .openMenu {
+    font-size: 2rem;
+    margin: 20px;
+    display: none;
+    cursor: pointer;
+}
+
+.RegisterOrLogin {
+    position: absolute;
+    top: 17%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.Login,
+.Register {
+    width: 25%;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.Login p,
+.Register p {
+    font-size: 15px;
+    margin-top: .3rem;
+}
+
+.Login h3,
+.Register h3 {
+    font-size: 22px;
+    margin-bottom: 1rem;
+}
+
+.LoginImage {
+    width: 90%;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.login-button,
+.register-buttons {
+    margin-top: 1rem;
+    width: 100%;
+    border: none;
+    border: 1px solid black;
+    padding: .5rem;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 400ms;
+    background: linear-gradient(to left, rgba(152, 200, 231, 1) 50%, rgba(133, 186, 221, 1) 50%) right;
+    background-size: 200%;
+}
+
+.login-button:hover,
+.register-buttons:hover {
+    background-position: left;
+}
+
+
+@media screen and (max-width: 600px) {
+    .pageTitle {
+        position: relative;
+        top: -.2rem;
+        left: 2rem;
+        font-size: 13px;
+    }
+
+    .RegisterOrLogin {
+        display: block;
+    }
+
+    .Register,
+    .Login {
+        width: 65%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .Register h3,
+    .Login h3 {
+        font-size: 20px;
+    }
+
+    nav .mainMenu {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: skyblue;
+        transition: top 1s ease;
+        display: none;
+        width: 100%;
+    }
+
+    nav .mainMenu .closeMenu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: black;
+        cursor: pointer;
+    }
+
+    nav .openMenu {
+        display: block;
+        width: 100%;
+    }
+
+    nav .mainMenu li:hover {
+        text-align: center;
+        background-color: rgba(133, 186, 221, 1);
+        width: 100%;
+
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+    .pageTitle {
+        position: relative;
+        top: -.2rem;
+        left: 2rem;
+        font-size: 13px;
+    }
+
+    .RegisterOrLogin {
+        display: block;
+
+    }
+
+    .Register,
+    .Login {
+        width: 65%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .Register h3,
+    .Login h3 {
+        font-size: 20px;
+    }
+
+    .Register p,
+    .Login p {
+        font-size: 15px;
+    }
+
+    nav .mainMenu {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: skyblue;
+        transition: top 1s ease;
+        display: none;
+        width: 100%;
+    }
+
+    nav .mainMenu .closeMenu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: black;
+        cursor: pointer;
+    }
+
+    nav .openMenu {
+        display: block;
+        width: 100%;
+    }
+
+    nav .mainMenu li:hover {
+        text-align: center;
+        background-color: rgba(133, 186, 221, 1);
+        width: 100%;
+
+    }
+}
+
+@media only screen and (min-width: 901px) and (max-width: 1200px) {
+    .RegisterOrLogin {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .Register,
+    .Login {
+        width: 35%;
+    }
+}
+
+@media only screen and (min-width: 1201px) and (max-width: 1535px) {
+    .pageTitle {
+        font-size: 15px;
+    }
+
+    .Register,
+    .Login {
+        width: 30%;
+    }
+    
+}
+
+@media only screen and (min-width: 1536px) and (max-width: 1836px) {
+    .pageTitle {
+        font-size: 18px;
+    }
+
+    
+    nav .mainMenu li a {
+        font-size: 18px;
+    }
+    .Register,
+    .Login {
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    .phone-for-good{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1837px) and (max-width: 3000px) {
+    .pageTitle {
+        font-size: 20px;
+    }
+    nav .mainMenu li a {
+        font-size: 19px;
+        position: relative;
+        top: .6rem;
+        right: 2rem;
+    }
+
+    .pageTitle {
+        position: relative;
+        top: 1rem;
+        left: 2rem;
+        font-size: 18px;
+    }
+
+    .RegisterOrLogin {
+        display: flex;
+
+    }
+
+    .phone-for-good {
+        display: none;
+    }
+
+    .Register,
+    .Login {
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .Register h3,
+    .Login h3 {
+        font-size: 25px;
+    }
+
+    .Register p,
+    .Login p {
+        font-size: 20px;
+    }
+
+
+    nav .mainMenu li a {
+        font-size: 20px;
+    }
+
+    .login-button,
+    .register-buttons {
+        font-size: 20px;
+    }
+
+}

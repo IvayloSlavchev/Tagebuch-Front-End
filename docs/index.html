@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <title>Tagebuch</title>
+</head>
+
+<body class="body">
+    <div class="mainPage">
+        <header class="header">
+            <div class="pageTitle">
+                <h1>Tagebuch</h1>
+            </div>
+            <nav>
+                <div class="openMenu"><i class="fa fa-bars"></i></div>
+                <ul class="mainMenu">
+                    <li class="header-list"><a href="./TeamPage/TeamPage.html" class="header-links">Team</a></li>
+                    <li class="header-list"><a href="../AboutUs/AboutUs.html" class="header-links">About us</a></li>
+
+                    <div class="closeMenu"><i class="fa fa-times"></i></div>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="RegisterOrLogin">
+            <!-- All images are downloaded from Unsplash.com -->
+
+            <div class="Login">
+                <h3>Welcome home!</h3>
+                <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80g" class="LoginImage" alt="studying buddies">
+                <p>By using our app you're saving thousands of trees.</p>
+                <p>You also helping us to improve education system.</p>
+
+                <button id="login" class="login-button">I have an account</button>
+            </div>
+            <div class="Register">
+
+                <h3>Welcome on board!</h3>
+                <img src="/FrontEnd/docs/images/RegistrationPicture.jpg" class="LoginImage" alt="studying buddies">
+                <p>A person who cares about trees?</p>
+                <p class="phone-for-good">Or want to use his phone for good?</p>
+                <p id="motivationalMessage">Stop being distracted by videos during exams. Try to use it for good.</p>
+
+                <button id="registration" class="register-buttons">I don't have an account</button>
+                
+            </div>
+        </div>
+    </div>
+    <script type="module">
+        const Registration = document.getElementById('registration')
+        const Login = document.getElementById('login')
+
+        const body = document.querySelector('.body');
+        const motivationalMessage = document.getElementById('motivationalMessage');
+
+        const header = document.querySelector('.mainPage');
+
+        //Hamburger menu
+        const mainMenu = document.querySelector('.mainMenu');
+        const closeMenu = document.querySelector('.closeMenu');
+        const openMenu = document.querySelector('.openMenu');
+
+        openMenu.addEventListener('click', show);
+        closeMenu.addEventListener('click', close);
+
+        function show(){
+            mainMenu.style.display = 'flex';
+            mainMenu.style.top = '0';
+        }
+
+        function close(){
+            mainMenu.style.top = '-104%'
+        }
+
+        Registration.addEventListener('click', (event) => {
+            event.preventDefault();
+            window.location.href = '../../FrontEnd/RegistrationLogin/Registration/registration.html'
+        })
+        Login.addEventListener('click', (event) => {
+            event.preventDefault();
+            window.location.href = "../../FrontEnd/RegistrationLogin/Login/login.html";
+        })
+    </script>
+</body>
+</html>

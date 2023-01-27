@@ -1,0 +1,85 @@
+body{
+    background: rgb(152, 200, 231);
+    background: linear-gradient(90deg, rgba(152, 200, 231, 1) 34%, rgba(152, 200, 231, 1) 100%);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+}
+.header-class{
+    text-align: center;
+    padding: 1rem;
+}
+.header-class h1{
+    font-size: 23px;
+}
+/* Search button*/
+#searchNotebook{
+    width: 20.7%;
+    padding: .5rem;
+    cursor: pointer;
+    border: 1px solid rgb(113, 154, 182);
+    background: linear-gradient(to left, rgba(152, 200, 231, 1) 50%, rgba(133, 186, 221, 1) 50%) right;
+    background-size: 200%;
+    transition: 400ms;
+}
+#searchNotebook:hover{
+    background-position: left;
+    border: 1px solid white;
+}
+
+.header-class input{
+    width: 20%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.header-class span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: skyblue;
+}
+.header-class input:focus ~ label,
+.header-class input:valid ~ label{
+    color: skyblue;
+    top: -5px;
+}
+
+.main-class{
+    margin-top: 4rem;
+}
+#notebookTitle, #notebookRecords{
+    margin-top: 2rem;
+    text-align: center;
+}
+@media screen and (max-width: 600px){
+    #searchNotebook, .header-class input{
+        width: 50%;
+    }
+}
+@media only screen and (min-width: 1800px) and (max-width: 2500px){
+    .header-class h1{
+        font-size: 24px;
+    }
+    #searchNotebook, .header-class input{
+        width: 30%;
+        font-size: 20px;
+    }
+    #notebookTitle{
+        font-size: 30px;
+    }
+    #notebookRecords{
+        font-size: 22px;
+    }
+} 

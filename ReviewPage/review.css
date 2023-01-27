@@ -1,0 +1,103 @@
+body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    background: rgb(152, 200, 231);
+    background: linear-gradient(90deg, rgba(152, 200, 231, 1) 34%, rgba(152, 200, 231, 1) 100%);
+    font-family: sans-serif;
+    letter-spacing: 1px;
+}
+header{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+header h3{
+    cursor: pointer;
+    transition: 200ms;
+    text-align: center;
+}
+header h3 a{
+    text-decoration: none;
+    color: black;
+}
+header h3:hover{
+    transform: scale(1.1);
+}
+
+
+h2{
+    text-align: center;
+}
+.review-page, .delete-page, .update-page{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 520px;
+    padding: 20px 30px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+.delete-page{
+    height: 400px;
+}
+.update-page{
+    height: 400px;
+}
+.input-fields label{
+    display: block;
+
+}
+.input-fields input{
+    width: 100%;
+    padding: .5rem;
+    outline: none;
+    font-size: 16px;
+    border: 1px solid black;
+}
+#reviewBody{
+    width: 100%;
+    outline: none;
+    border: 1px solid black;
+    font-size: 16px;
+}
+#submitReview, #deleteReview, #updateReview{
+    width: 101%;
+    
+    padding: .5rem;
+    cursor: pointer;
+    transition: 400ms;
+    background: linear-gradient(to left, rgba(152, 200, 231, 1) 50%, rgba(133, 186, 221, 1) 50%) right;
+    background-size: 200%;
+    border: none;
+}
+#deleteReview{
+    margin-top: .5rem;
+}
+#submitReview:hover{
+    background-position: left;
+}
+@media only screen and (min-width: 1800px) and (max-width: 2500px) {
+    .review-page{
+        height: 60%;
+    }
+    .input-fields label{
+        font-size: 22px;
+    
+    }
+    .input-fields input{
+       font-size: 17px;
+    }
+    #reviewBody{
+      font-size: 17px;
+    }
+    #deleteReview, #updateReview{
+      font-size: 23px;
+    }
+    #submitReview{
+        font-size: 17px;
+    }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="registration.css">
+    <title>Registration</title>
+</head>
+    <body>
+        <div class="mainDiv">
+            <h1>Register</h1>
+            <form action="connect.nodejs" method="POST">
+                <p id="errorMessage"></p>
+                <div class="UserData">
+                    <input type="text" required name="username" id="username">
+                    <span></span>
+                    <label>Username</label>
+                </div>
+                <div class="UserData">
+                    <input type="email" name="email" id="email" required>
+                    <span></span>
+                    <label>Email</label>
+                </div>
+                <div class="UserData">
+                    <input type="text" name="phoneNumber" id="phoneNumber"  required>
+                    <span></span>
+                    <label>Phone number:</label>
+                </div>
+                <div class="UserData">
+                    <input type="text" name="userRole" id="userRole"  required>
+                    <span></span>
+                    <label>I am (student/teacher):</label>
+                </div>
+                <div class="UserData">
+                    <input type="text" name="schoolName" id="schoolName"  required>
+                    <span></span>
+                    <label>School name:</label>
+                </div>
+                <div class="UserData">
+                    <input type="password" required name="password" id="password">
+                    <span></span>
+                    <label>Password</label>
+                </div>
+                <div class="redirectURL"><a href="/FrontEnd/RegistrationLogin/Login/login.html">Already have account?</a></div>
+                <button type="submit" id="registerButton">Create account</button>
+            </form>
+        </div>
+        <script src="registration.js" type="module"></script>
+    </body>
+</html>
