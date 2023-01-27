@@ -31,7 +31,7 @@ loginButton.addEventListener('click', (event) => {
             'Content-Type': 'application/json'
         },
     }
-    fetch('https://tagebuch-test-api.onrender.comusers/login', options).then((response) => {
+    fetch('https://tagebuch-test-api.onrender.com/users/login', options).then((response) => {
         if(response.status === 200){
             window.location.href = '../../StudentPage/studentPage.html';
             localStorage.setItem('username', username)
