@@ -46,7 +46,7 @@ deleteButton.addEventListener('click', (event) => {
 
 function usersReviews() {
 
-    fetch('https://tagebuch-test-api.onrender.com/reviews').then(response => response.json())
+    fetch('https://tagebuch-api-production.onrender.com/reviews').then(response => response.json())
         .then((reviewSection) => {
             console.log(reviewSection)
             if (reviewSection.length == 0) {

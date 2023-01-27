@@ -44,7 +44,7 @@ function userCredentials(username, email, phone, password, role, schoolName) {
             'Content-Type': 'application/json'
         },
     }
-    fetch('https://tagebuch-test-api.onrender.com/users/registration', options)
+    fetch('https://tagebuch-api-production.onrender.com/users/registration', options)
         .then((response) => {
             if (response.status === 409) {
                 errorMessage.innerText = 'Username already exists';
