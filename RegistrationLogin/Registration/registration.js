@@ -53,7 +53,7 @@ function userCredentials(username, email, phone, password, role, schoolName) {
                 return;
             } else {
                 localStorage.setItem('role', role);
-                window.location.href = '/FrontEnd/RegistrationLogin/Login/login.html';
+                window.location.href = '../../StudentPage/studentPage.html';
             }
         });
 }
