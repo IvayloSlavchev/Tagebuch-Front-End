@@ -32,7 +32,7 @@ createNotebookButton.addEventListener('click', (event) => {
             errorMessage.innerText = 'Notebook name already exists. Try to put you name in front of notebook name';
             return;
         } else {
-            window.location.href = '/FrontEnd/StudentPage/studentPage.html';
+            window.location.href = '../studentPage.html';
         }
     })
 })

@@ -34,7 +34,7 @@ deleteButton.addEventListener('click', (event) => {
                 errorMessage.innerText = 'Username not found';
                 return;
             } else {
-                window.location.href = '/FrontEnd/StudentPage/studentPage.html';
+                window.location.href = '../../StudentPage/studentPage.html';
             }
         })
 })

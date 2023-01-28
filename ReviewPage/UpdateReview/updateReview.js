@@ -30,7 +30,7 @@ submitReview.addEventListener('click', (event) => {
             errorMessage.innerText = 'An error has occured. Please try again.'
             return;
         } else {
-            window.location.href = '/FrontEnd/StudentPage/studentPage.html';
+            window.location.href = '../../StudentPage/studentPage.html';
         }
     })
 })

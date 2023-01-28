@@ -85,6 +85,34 @@ form .UserData{
     text-decoration: none;
     color: black;
 }
+@media only screen and (min-width: 200px) and (max-width: 600px){
+    .mainDiv{
+        width: 90%;
+        height: 85%;
+    }
+    .mainDiv h1{
+        font-size: 18px;
+    }
+    .UserData label{
+        font-size: 14px;
+    }
+    .UserData input{
+        font-size: 14px;
+        width: 50%;
+        /* height: 40%; */
+    }
+    form .UserData{
+        margin: 15px 0;
+    }
+    .redirectURL{
+        font-size: 15px;
+    }
+    #registerButton{
+        font-size: 13px;
+        height: 50%;
+        padding: .3rem;
+    }
+}
 @media only screen and (min-width: 1200px) and (max-width: 1535px){
     .mainDiv{
         width: 30%;

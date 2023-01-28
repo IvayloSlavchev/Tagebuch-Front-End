@@ -26,22 +26,22 @@ function close(){
 createButton.addEventListener('click', (event) => {
     event.preventDefault();
 
-    window.location.href = '/FrontEnd/StudentPage/CreateNotebook/createNotebook.html'
+    window.location.href = './CreateNotebook/createNotebook.html'
 })
 readButton.addEventListener('click', (event) => {
     event.preventDefault();
 
-    window.location.href = '/FrontEnd/StudentPage/ReadNotebook/Readnotebook.html'
+    window.location.href = './ReadNotebook/Readnotebook.html'
 })
 updateButton.addEventListener('click', (event) => {
     event.preventDefault();
 
-    window.location.href = '/FrontEnd/StudentPage/UpdateNotebook/updateNotebook.html'
+    window.location.href = './UpdateNotebook/updateNotebook.html'
 })
 deleteButton.addEventListener('click', (event) => {
     event.preventDefault();
 
-    window.location.href = '/FrontEnd/StudentPage/DeleteNotebook/DeleteNotebook.html'
+    window.location.href = './DeleteNotebook/DeleteNotebook.html'
 })
 
 function usersReviews() {

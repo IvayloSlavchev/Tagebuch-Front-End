@@ -21,6 +21,18 @@ a{
     cursor: pointer;
     color: black;
 }
+@media only screen and (min-width: 200px) and (max-width: 600px){
+    .title{
+        font-size: 23px;
+    }
+    .raw-information h1{
+        font-size: 24px;
+    }
+    .raw-information{
+       position: relative;
+       left: 40px;
+    }
+}
 @media only screen and (min-width: 1836px) and (max-width: 2500px){
     .raw-information {
         position: absolute;
