@@ -89,7 +89,7 @@ form .UserData{
     @media only screen and (min-width: 200px) and (max-width: 600px){
         .mainDiv{
             width: 90%;
-            height: 55%;
+            height: 65%;
         }
         .mainDiv h1{
             font-size: 18px;
