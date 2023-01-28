@@ -17,6 +17,8 @@ submitReview.addEventListener('click', (event) => {
     const data = { username, userReview };
 
     let options = {
+        origin: "*",
+        credentials: true,
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json'
@@ -24,7 +26,7 @@ submitReview.addEventListener('click', (event) => {
         body: JSON.stringify(data),
     }
 
-    fetch('https://tagebuch-test-api.onrender.com/reviews', options)
+    fetch(`https://tagebuch-test-api.onrender.com/reviews/${username}`, options)
     .then((response) => {
         if(response.status === 404){
             errorMessage.innerText = 'An error has occured. Please try again.'
