@@ -9,36 +9,34 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <title>Student Page</title>
 </head>
+    <body>
+        <header class="header">
+            <div class="title">
+                <h1>Tagebuch</h1>
+            </div>
+            <nav class="options">
+                <div class="openMenu"><i class="fa fa-bars"></i></div>
+                <ul class="student-options-ul">
+                    <li class="options-li"><button class="options-button" id="options-button-create">Create notebook</button></li>
+                    <li class="options-li"><button class="options-button" id="options-button-read">Read notebook</button></li>
+                    <li class="options-li"><button class="options-button" id="options-button-update">Update notebook</button></li>
+                    <li class="options-li"><button class="options-button" id="options-button-delete">Delete notebook</button></li>
 
-<body>
-    <header class="header">
-        <div class="title">
-            <h1>Tagebuch</h1>
-        </div>
-        <nav class="options">
-            <div class="openMenu"><i class="fa fa-bars"></i></div>
-            <ul class="student-options-ul">
-                <li class="options-li"><button class="options-button" id="options-button-create">Create notebook</button></li>
-                <li class="options-li"><button class="options-button" id="options-button-read">Read notebook</button></li>
-                <li class="options-li"><button class="options-button" id="options-button-update">Update notebook</button></li>
-                <li class="options-li"><button class="options-button" id="options-button-delete">Delete notebook</button></li>
+                    <div class="closeMenu"><i class="fa fa-times"></i></div>
+                </ul>
+            </nav>
+        </header>
 
-                <div class="closeMenu"><i class="fa fa-times"></i></div>
-            </ul>
-        </nav>
-    </header>
+        <main class="reviews-body">
+            <div class="user-review">
+            
+            </div>
+        </main>
 
-    <main class="reviews-body">
-        <div class="user-review">
-          
-        </div>
-    </main>
-
-    <footer>
-        <h1>Are you ready to give an review to our website?</h1>
-        <p>Follow this link and give us your opinion: <a href="../ReviewPage/review.html">Review section</a></p>
-    </footer>
-    <script src="studentPage.js"></script>
-</body>
-
+        <footer>
+            <h1>Are you ready to give an review to our website?</h1>
+            <p>Follow this link and give us your opinion: <a href="../ReviewPage/review.html">Review section</a></p>
+        </footer>
+        <script src="studentPage.js"></script>
+    </body>
 </html>
