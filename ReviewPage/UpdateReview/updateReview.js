@@ -17,11 +17,12 @@ submitReview.addEventListener('click', (event) => {
     const data = { username, userReview };
 
     let options = {
+        mode: "no-cors",
         method: 'PUT',
-        body: JSON.stringify(data),
         headers: {
             'Content-Type': 'application/json'
         },
+        body: JSON.stringify(data),
     }
 
     fetch('https://tagebuch-test-api.onrender.com/reviews', options)

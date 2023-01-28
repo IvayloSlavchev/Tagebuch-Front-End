@@ -16,7 +16,7 @@ deleteButton.addEventListener('click', () => {
     fetch(`https://tagebuch-api-production.onrender.com/notebookrecords/${notebookName}`, options)
     .then(response => {
         if(response.status != 404){
-            window.location.href = '/FrontEnd/StudentPage/studentPage.html'
+            window.location.href = '../studentPage.html'
         } else {
             errorMessage.innerText = 'Notebook name not provided'
         }   
