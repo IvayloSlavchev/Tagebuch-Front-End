@@ -17,7 +17,6 @@ submitReview.addEventListener('click', (event) => {
     const data = { username, userReview };
 
     let options = {
-        mode: "no-cors",
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json'
