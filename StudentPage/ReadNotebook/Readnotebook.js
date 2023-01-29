@@ -20,10 +20,6 @@ searchNotebookButton.addEventListener('click', () => {
             return response.json();
         }).then((data) => {
             data.map((item) => {
-                if(notebookName != item.notebookName){
-                    errorMessage.innerText = 'Notebook not found';
-                    return;
-                }
 
                 if (notebookName == item.notebookName) {
                     notebookReadClass.className = 'notebook-read'
