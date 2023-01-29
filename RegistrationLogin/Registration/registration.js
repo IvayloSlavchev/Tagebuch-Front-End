@@ -17,7 +17,7 @@ function userCredentials(username, email, phone, password, role, schoolName) {
         return;
 
     } else if (phone.length < 10) {
-        errorMessage.innerText = `Phone number should contain country code and numbers`;
+        errorMessage.innerText = `Phone number should be 10 digits long.`;
         hideSubmitButton();
         windowReload();
         return;
