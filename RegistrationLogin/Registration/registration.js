@@ -44,17 +44,29 @@ function userCredentials(username, email, phone, password, role, schoolName) {
             'Content-Type': 'application/json'
         },
     }
-    fetch('https://tagebuch-api-production.onrender.com/users/registration', options)
+    fetch('https://tagebuch-api-production.onrender.com/users/registration', options).then(response => response.json())
         .then((response) => {
-            if (response.status === 409) {
-                errorMessage.innerText = 'Username already exists';
-                hideSubmitButton();
-                windowReload();
-                return;
-            } else {
-                localStorage.setItem('role', role);
-                window.location.href = '../Login/login.html';
+            try {
+                if (response.status === 409) {
+                    errorMessage.innerText = 'Username already exists';
+                    hideSubmitButton();
+                    windowReload();
+                    return;
+                } else {
+                    window.location.href = '../Login/login.html';
+
+                    localStorage.clear();
+                    localStorage.setItem('role', role);
+                    localStorage.setItem('username', username)
+
+                }
+            } catch (error) {
+                throw new Error('Error at registration page: ' + error);
             }
+        }).catch(() => {
+            errorMessage.innerText = 'User already exists';
+            windowReload();
+            return;
         });
 }
 
@@ -78,6 +90,6 @@ function windowReload() {
         window.location.reload();
     }, 2500);
 }
-function hideSubmitButton(){
+function hideSubmitButton() {
     registrationButton.style.display = 'none';
 }

@@ -35,6 +35,7 @@ deleteButton.addEventListener('click', (event) => {
                 return;
             } else {
                 errorMessage.innerText = "Review deleted successfully!";
+                window.location.href = '../../StudentPage/studentPage.html';
             }
         })
 })

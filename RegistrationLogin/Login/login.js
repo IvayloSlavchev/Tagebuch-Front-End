@@ -18,7 +18,7 @@ loginButton.addEventListener('click', (event) => {
     }
 
 
-    if(!username || !email || !password){
+    if (!username || !email || !password) {
         errorMessage.innerText = 'Cannot send empty input field';
         windowReload();
         return;
@@ -31,24 +31,24 @@ loginButton.addEventListener('click', (event) => {
             'Content-Type': 'application/json'
         },
     }
-    fetch('https://tagebuch-api-production.onrender.com/users/login', options).then((response) => {
-        if(response.status === 200){
-            window.location.href = '../../StudentPage/studentPage.html';
-
-            const isUsernameInLocalStorage = localStorage.getItem('username');
-
-            if(!isUsernameInLocalStorage){
-                localStorage.setItem('username', username)
+    
+    fetch('https://tagebuch-api-production.onrender.com/users/login', options).then(response => response.json()).then((response) => {
+        try {
+            if (response.status === 200) {
+                window.location.href = '../../StudentPage/studentPage.html';
+    
+            } else if (response.status == 404) {
+                errorMessage.innerText = 'Invalid username/email or password';
+                windowReload();
             }
-
-
-        } else if(response.status == 404){
-            errorMessage.innerHTML = 'Invalid username/email or password';
-            windowReload();
+        } catch(error) {
+            return error.message;
         }
-    });
+    }).catch(() => {
+        
+    })
 });
-function windowReload(){
+function windowReload() {
     setTimeout(() => {
         window.location.reload();
     }, 2000);
