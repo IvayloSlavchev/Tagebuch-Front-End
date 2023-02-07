@@ -34,7 +34,13 @@ loginButton.addEventListener('click', (event) => {
     fetch('https://tagebuch-api-production.onrender.com/users/login', options).then((response) => {
         if(response.status === 200){
             window.location.href = '../../StudentPage/studentPage.html';
-            localStorage.setItem('username', username)
+
+            const isUsernameInLocalStorage = localStorage.getItem('username');
+
+            if(!isUsernameInLocalStorage){
+                localStorage.setItem('username', username)
+            }
+
 
         } else if(response.status == 404){
             errorMessage.innerHTML = 'Invalid username/email or password';
