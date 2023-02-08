@@ -44,9 +44,9 @@ function userCredentials(username, email, phone, password, role, schoolName) {
             'Content-Type': 'application/json'
         },
     }
-    fetch('https://tagebuch-api-production.onrender.com/users/registration', options)
+    try {
+        fetch('https://tagebuch-api-production.onrender.com/users/registration', options)
         .then((response) => {
-            console.log(response)
             try {
                 if (response.status === 409) {
                     errorMessage.innerText = 'Username already exists';
@@ -71,6 +71,10 @@ function userCredentials(username, email, phone, password, role, schoolName) {
             windowReload();
             return;
         });
+    } catch(error) {
+        console.log('Can\'t not do POST request');
+        return
+    }
 }
 
 registrationButton.addEventListener('click', (event) => {
