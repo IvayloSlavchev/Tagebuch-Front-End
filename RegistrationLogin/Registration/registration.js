@@ -44,21 +44,24 @@ function userCredentials(username, email, phone, password, role, schoolName) {
             'Content-Type': 'application/json'
         },
     }
-    fetch('https://tagebuch-api-production.onrender.com/users/registration', options).then(response => response.json())
+    fetch('https://tagebuch-api-production.onrender.com/users/registration', options)
         .then((response) => {
+            console.log(response)
             try {
                 if (response.status === 409) {
                     errorMessage.innerText = 'Username already exists';
                     hideSubmitButton();
                     windowReload();
                     return;
-                } else {
-                    window.location.href = '../Login/login.html';
-
+                } else if (response.status === 201){
                     localStorage.clear();
                     localStorage.setItem('role', role);
-                    localStorage.setItem('username', username)
+                    localStorage.setItem('username', username);
 
+                    window.location.href = '../Login/login.html';
+                    return;
+                } else {
+                    return errorMessage.innerText = 'An error has occured. Please try again later.';
                 }
             } catch (error) {
                 throw new Error('Error at registration page: ' + error);

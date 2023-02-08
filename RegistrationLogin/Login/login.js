@@ -36,13 +36,14 @@ loginButton.addEventListener('click', (event) => {
         try {
             if (response.status === 200) {
                 window.location.href = '../../StudentPage/studentPage.html';
-    
+                return;
             } else if (response.status == 404) {
                 errorMessage.innerText = 'Invalid username/email or password';
                 windowReload();
+                return;
             }
         } catch(error) {
-            return error.message;
+            return error;
         }
     }).catch(() => {
         
