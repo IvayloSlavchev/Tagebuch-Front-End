@@ -20,7 +20,7 @@ searchNotebookButton.addEventListener('click', () => {
             return response.json();
         }).then((data) => {
             data.map((item) => {
-                const validateUser = localStorage.getItem('username');
+                const validateUser = sessionStorage.getItem('username');
 
                 if(item.ownedBy != validateUser){
                     errorMessage.innerText = 'This notebook is not owned by you';
