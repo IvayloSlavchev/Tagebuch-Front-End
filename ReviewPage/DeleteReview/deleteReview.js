@@ -21,7 +21,7 @@ deleteButton.addEventListener('click', (event) => {
             'Content-Type': 'application/json'
         },
     }
-    const usernameFromLocalHost = localStorage.getItem('username');
+    const usernameFromLocalHost = sessionStorage.getItem('username');
 
     if (username != usernameFromLocalHost) {
         errorMessage.innerText = 'You can\'t delete other\'s people comments'

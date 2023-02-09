@@ -48,11 +48,6 @@ function usersReviews() {
 
     fetch('https://tagebuch-api-production.onrender.com/reviews')
         .then(async (reviewSection) => {
-            const componentDiv = document.createElement('div');
-            componentDiv.className = 'components';
-            const username = document.createElement('h3');
-            const role = document.createElement('p');
-            const review = document.createElement('p');
 
 
             const userReviews = await reviewSection.json();
@@ -68,13 +63,20 @@ function usersReviews() {
                 userReviewClass.appendChild(NoCommentDiv);
                 return;
             }
+
             userReviews.map((item) => {
+                const componentDiv = document.createElement('div');
+                componentDiv.className = 'components';
+                const username = document.createElement('h3');
+                const review = document.createElement('p');
+                
                 username.innerText = item.username;
                 review.innerText = item.userReview;
+
+                componentDiv.append(username, review);
+                userReviewClass.append(componentDiv);
             })
 
-            componentDiv.append(username, review);
-            userReviewClass.append(componentDiv);
         })
 }
 usersReviews();

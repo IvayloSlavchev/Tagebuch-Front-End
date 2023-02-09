@@ -1,7 +1,6 @@
 const loginButton = document.getElementById('loginButton');
 const errorMessage = document.getElementById('errorMessage');
 
-
 loginButton.addEventListener('click', (event) => {
     event.preventDefault();
     const username = document.getElementById('username').value;

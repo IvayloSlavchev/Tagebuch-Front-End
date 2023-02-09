@@ -10,10 +10,9 @@ submitReview.addEventListener('click', (event) => {
         errorMessage.innerText = 'You have to enter some review in order to post it.'
         return;
     }
-    
-    const username = localStorage.getItem('username');
 
-    const data = { reviewTitle, userReview }
+    const username = sessionStorage.getItem('username')
+    const data = { username, reviewTitle, userReview }
 
     const options = {
         method: 'POST',
