@@ -70,11 +70,10 @@ function usersReviews() {
             }
             userReviews.map((item) => {
                 username.innerText = item.username;
-                role.innerText = studentRole;
                 review.innerText = item.userReview;
             })
 
-            componentDiv.append(username, role, review);
+            componentDiv.append(username, review);
             userReviewClass.append(componentDiv);
         })
 }

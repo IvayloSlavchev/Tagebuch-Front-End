@@ -13,7 +13,7 @@ submitReview.addEventListener('click', (event) => {
     
     const username = localStorage.getItem('username');
 
-    const data = { username, reviewTitle, userReview }
+    const data = { reviewTitle, userReview }
 
     const options = {
         method: 'POST',

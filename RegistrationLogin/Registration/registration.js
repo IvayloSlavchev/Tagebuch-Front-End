@@ -1,4 +1,4 @@
-const registrationButton = document.getElementById('registerButton');
+    const registrationButton = document.getElementById('registerButton');
 const errorMessage = document.getElementById('errorMessage');
 
 const allowedRoleFirst = 'Student'
@@ -55,8 +55,8 @@ function userCredentials(username, email, phone, password, role, schoolName) {
                     return;
                 } else if (response.status === 201){
                     localStorage.clear();
-                    localStorage.setItem('role', role);
-                    localStorage.setItem('username', username);
+                    sessionStorage.setItem('role', role)
+                    sessionStorage.setItem('username', username)
 
                     window.location.href = '../Login/login.html';
                     return;
