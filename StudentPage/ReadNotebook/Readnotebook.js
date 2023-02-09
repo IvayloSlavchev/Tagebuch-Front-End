@@ -16,10 +16,16 @@ searchNotebookButton.addEventListener('click', () => {
 
     if (searchNotebookButton.textContent == 'Search notebook') {
         searchNotebookButton.textContent = 'Stop reading'
-        fetch(`https://tagebuch-api-production.onrender.com/notebookrecords/1`).then((response) => {
+        fetch(`https://tagebuch-api-production.onrender.com/notebookrecords/`).then((response) => {
             return response.json();
         }).then((data) => {
             data.map((item) => {
+                const validateUser = localStorage.getItem('username');
+
+                if(item.ownedBy != validateUser){
+                    errorMessage.innerText = 'This notebook is not owned by you';
+                    return;
+                }
 
                 if (notebookName == item.notebookName) {
                     notebookReadClass.className = 'notebook-read'

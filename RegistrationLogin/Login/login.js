@@ -32,7 +32,7 @@ loginButton.addEventListener('click', (event) => {
         },
     }
     
-    fetch('https://tagebuch-api-production.onrender.com/users/login', options).then(response => response.json()).then((response) => {
+    fetch('https://tagebuch-api-production.onrender.com/users/login', options).then((response) => {
         try {
             if (response.status === 200) {
                 window.location.href = '../../StudentPage/studentPage.html';
@@ -45,8 +45,9 @@ loginButton.addEventListener('click', (event) => {
         } catch(error) {
             return error;
         }
-    }).catch(() => {
-        
+    }).catch((error) => {
+        errorMessage.innerText = 'Error occured please try again later';
+        throw new Error('Error on login page: ' + error);
     })
 });
 function windowReload() {

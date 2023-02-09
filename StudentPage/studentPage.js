@@ -15,11 +15,11 @@ const closeMenu = document.querySelector('.closeMenu');
 openMenu.addEventListener('click', show);
 closeMenu.addEventListener('click', close);
 
-function show(){
+function show() {
     mainMenu.style.display = 'flex';
     mainMenu.style.top = '0';
 }
-function close(){
+function close() {
     mainMenu.style.top = '-104%';
 }
 
@@ -46,39 +46,36 @@ deleteButton.addEventListener('click', (event) => {
 
 function usersReviews() {
 
-    fetch('https://tagebuch-api-production.onrender.com/reviews').then(response => response.json())
-        .then((reviewSection) => {
-            console.log(reviewSection)
-            if (reviewSection.length == 0) {
+    fetch('https://tagebuch-api-production.onrender.com/reviews')
+        .then(async (reviewSection) => {
+            const componentDiv = document.createElement('div');
+            componentDiv.className = 'components';
+            const username = document.createElement('h3');
+            const role = document.createElement('p');
+            const review = document.createElement('p');
+
+
+            const userReviews = await reviewSection.json();
+            console.log(userReviews)
+            if (userReviews.length == 0) {
                 const noCommentsTextMessage = document.createElement('h3');
                 const NoCommentDiv = document.createElement('div');
                 noCommentsTextMessage.setAttribute('id', 'noCommentsTextMessage');
                 noCommentsTextMessage.innerText = 'No reviews yet...Be the first one :)'
-                
+
                 NoCommentDiv.className = 'noCommentDiv'
                 NoCommentDiv.appendChild(noCommentsTextMessage);
                 userReviewClass.appendChild(NoCommentDiv);
                 return;
             }
-            
-            reviewSection.map((item) => {
-                const componentDiv = document.createElement('div');
-                componentDiv.className = 'components';
-                const username = document.createElement('h3');
-                const role = document.createElement('p');
-                const review = document.createElement('p');
-
-                const studentRole = localStorage.getItem('role');
-
-
+            userReviews.map((item) => {
                 username.innerText = item.username;
                 role.innerText = studentRole;
                 review.innerText = item.userReview;
-
-                componentDiv.append(username, role, review)
-                userReviewClass.append(componentDiv);
-
             })
+
+            componentDiv.append(username, role, review);
+            userReviewClass.append(componentDiv);
         })
 }
 usersReviews();

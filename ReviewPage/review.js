@@ -21,9 +21,9 @@ submitReview.addEventListener('click', (event) => {
         headers: {
             'Content-Type': 'application/json'
         },
-    }
+    }   
 
-    fetch('https://tagebuch-api-production.onrender.com/reviews', options)
+    fetch('ttps://tagebuch-api-production.onrender.com/reviews', options)
     .then(response => {
         console.log(response.status)
         if(response.status == 409){

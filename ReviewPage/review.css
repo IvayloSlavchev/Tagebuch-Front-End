@@ -26,7 +26,6 @@ header h3:hover{
     transform: scale(1.1);
 }
 
-
 h2{
     text-align: center;
 }
@@ -36,7 +35,7 @@ h2{
     left: 50%;
     transform: translate(-50%, -50%);
     width: 500px;
-    height: 520px;
+    height: 560px;
     padding: 20px 30px;
     background-color: #fff;
     border-radius: 10px;
@@ -58,6 +57,7 @@ h2{
     font-size: 16px;
     border: 1px solid black;
 }
+
 #reviewBody{
     width: 100%;
     outline: none;
@@ -80,9 +80,32 @@ h2{
 #submitReview:hover{
     background-position: left;
 }
+@media only screen and (min-width: 300px) and (max-width: 600px){
+    #reviewTitle{
+        width: 95%;
+    }
+    .review-page{
+        width: 50%;
+        margin-top: 1rem;
+    }
+    
+    header h3 {
+        font-size: 14px;
+    }
+    h2, li, label{
+        font-size: 15px;
+    }
+    #chooseRoleMenu{
+        padding: .2rem;
+    }
+    #reviewBody{
+        font-size: 16px;
+    }
+}
 @media only screen and (min-width: 1800px) and (max-width: 2500px) {
     .review-page{
         height: 60%;
+       
     }
     .input-fields label{
         font-size: 22px;
