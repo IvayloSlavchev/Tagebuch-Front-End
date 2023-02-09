@@ -34,6 +34,9 @@ loginButton.addEventListener('click', (event) => {
     fetch('https://tagebuch-api-production.onrender.com/users/login', options).then((response) => {
         try {
             if (response.status === 200) {
+                sessionStorage.clear();
+                sessionStorage.setItem('username', username)
+
                 window.location.href = '../../StudentPage/studentPage.html';
                 return;
             } else if (response.status == 404) {

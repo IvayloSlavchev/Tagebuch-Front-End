@@ -31,7 +31,7 @@ deleteButton.addEventListener('click', (event) => {
     fetch(`https://tagebuch-api-production.onrender.com/reviews`, options)
         .then((response) => {
             if (response.status === 404) {
-                errorMessage.innerText = 'Username not found';
+                errorMessage.innerText = 'Username or message not found';
                 return;
             } else {
                 errorMessage.innerText = "Review deleted successfully!";

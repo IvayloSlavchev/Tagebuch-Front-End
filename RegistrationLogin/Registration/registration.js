@@ -54,10 +54,7 @@ function userCredentials(username, email, phone, password, role, schoolName) {
                     windowReload();
                     return;
                 } else if (response.status === 201){
-                    localStorage.clear();
-                    sessionStorage.setItem('role', role)
-                    sessionStorage.setItem('username', username)
-
+                    
                     window.location.href = '../Login/login.html';
                     return;
                 } else {
