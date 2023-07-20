@@ -1,8 +1,5 @@
 Tagebuch - Front-End
 
-Technologies:
-<img src="./read-me-images/React-icon.png" alt="React logo">
-
 This is the Front-End part of the Tagebuch, here I've build the UI.
 
 Also as functionality I added the options to: register, login. This is key concept, because if user does not register or login he will not be able to neither read nor create, update or delete notebooks.
